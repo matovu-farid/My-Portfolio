@@ -2,9 +2,10 @@
 
 # My-Portfolio
 
-> One paragraph statement about the project.
+This is My personal portfolio
+It describes my work aa s software developer.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./assets/project_screenshot2.png)
 
 This project is my portfolio.
 
