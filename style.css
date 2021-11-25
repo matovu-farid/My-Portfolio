@@ -42,7 +42,6 @@ main {
   justify-content: center;
   align-items: center;
   width: 65%;
-  border: 1px solid #999;
 }
 
 .heading {
@@ -67,12 +66,10 @@ footer {
   justify-content: center;
   flex: 2;
   width: 65%;
-  border: 1px solid #999;
 }
 
 footer div {
   width: 65%;
-  border: 1px solid #999;
   display: flex;
   justify-content: space-between;
 }
