@@ -3,18 +3,19 @@ html {
   display: flex;
   justify-content: center;
   background-color: rgba(100, 0, 0, 0.1);
+  font-size: 10px;
 }
 
 body {
   background-color: #fff;
-  width: 375px;
+  width: 100%;
   border: 1px solid #999;
   color: #172b4d;
   justify-content: space-around;
   flex-direction: column;
   font-family: sans-serif;
   font-family: 'Inter', serif;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .tool-bar {
@@ -58,7 +59,7 @@ body {
 
 .heading h1,
 h2 {
-  font-size: 40px;
+  font-size: 4rem;
   text-align: center;
 }
 
