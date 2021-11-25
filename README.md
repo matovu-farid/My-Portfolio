@@ -2,9 +2,10 @@
 
 # My-Portfolio
 
-> One paragraph statement about the project.
+This is My personal portfolio.
+It describes my work as software developer.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./assets/project_screenshot.png)
 
 This project is my portfolio.
 
@@ -13,11 +14,17 @@ This project is my portfolio.
 - HTML
 - CSS
 
+## Getting Started
+To get the content of this project locally you need to run this command in your terminal:
+- git clone your https://github.com/matovu-farid/My-Portfolio.git
+- cd project My-Portfolio
 ## Authors
 
 👤 **Matovu Fariid Nkoba**
 
-- GitHub: [@githubhandle](https://github.com/matovu-farid)
+- GitHub: [@matovu-farid](https://github.com/matovu-farid)
+- Twitter: [@matovu100](https://twitter.com/matovu100)
+- LinkedIn: [matovu-farid](https://www.linkedin.com/in/matovu-farid-48b80257)
 
 ## 📝 License
 
