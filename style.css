@@ -35,7 +35,7 @@ body {
   flex-direction: column;
 }
 
-main {
+.text {
   display: flex;
   flex: 6;
   flex-direction: column;
@@ -44,7 +44,7 @@ main {
   width: 85%;
 }
 
-main p {
+.text p {
   text-align: center;
   flex: 0 1 327px;
   font-weight: 400;
