@@ -6,30 +6,30 @@ html {
 }
 
 body {
-  background-color: rgb(241, 241, 241);
+  background-color: #fff;
   width: 375px;
-  height: 700px;
   border: 1px solid #999;
   color: #172b4d;
   justify-content: space-around;
-  display: flex;
   flex-direction: column;
   font-family: sans-serif;
   font-family: 'Inter', serif;
+  font-size: 20px;
 }
 
 .tool-bar {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 1px 10px;
+  height: 92px;
+  margin: 1px 24px;
 }
 
 .background {
+  height: 726px;
   background-image: url("./assets/header-illsutration-mobile@2x.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  flex: 7;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -37,17 +37,29 @@ body {
 
 main {
   display: flex;
-  flex: 8;
+  flex: 6;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 85%;
+}
+
+main p {
+  text-align: center;
+  flex: 0 1 327px;
+  font-weight: 400;
 }
 
 .heading {
   text-align: center;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.heading h1,
+h2 {
+  font-size: 40px;
+  text-align: center;
 }
 
 .green-text {
@@ -63,13 +75,32 @@ article {
 
 footer {
   display: flex;
-  justify-content: center;
-  flex: 2;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 3;
   width: 65%;
 }
 
-footer div {
+footer ul {
   width: 65%;
   display: flex;
   justify-content: space-between;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer a {
+  color: inherit;
+}
+
+footer ul li a {
+  color: #505f79;
+}
+
+footer img {
+  width: 40px;
+  height: 40px;
 }
