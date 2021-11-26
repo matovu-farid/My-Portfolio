@@ -31,6 +31,10 @@ header {
   justify-content: center;
 }
 
+button {
+  border-style: none;
+}
+
 ul {
   margin: 1px;
   padding: 0.000001px;
@@ -69,7 +73,7 @@ h3 {
   font-size: 2rem;
 }
 
-h4 {
+.medium-text {
   font-size: 2rem;
   font-weight: 400;
   font-style: normal;
@@ -125,6 +129,10 @@ h4 {
 
 .bg-green {
   background-color: #36b37f;
+}
+
+.bg-green:active {
+  background-color: #008552;
 }
 
 .bg-white {
@@ -210,10 +218,6 @@ h4 {
   font-size: 17px;
   align-self: center;
   font-weight: 500;
-}
-
-.bg-green:active {
-  background-color: #008552;
 }
 
 .center {
