@@ -241,6 +241,7 @@ h4 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 45px 1px 1px 1px;
 }
 
 .links {
