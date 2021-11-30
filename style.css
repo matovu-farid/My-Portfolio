@@ -21,6 +21,14 @@ main {
   align-items: center;
 }
 
+footer {
+  background: url('./assets/backgrounds/contact-form.png') no-repeat right bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
 header {
   text-align: center;
 }
@@ -277,4 +285,38 @@ h3 {
 
 .links ul li a {
   color: #505f79;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 87.2%;
+  align-items: center;
+}
+
+.input {
+  font-family: 'Inter', sans-serif;
+  margin: 10px 1px;
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  border-color: grey;
+  border-style: solid;
+}
+
+textarea.input {
+  height: 10rem;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #36b37f;
+}
+
+.black-line {
+  background-color: #000;
+  border-radius: 4px;
+  width: 36%;
+  height: 4px;
 }
