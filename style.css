@@ -33,6 +33,10 @@ header {
   text-align: center;
 }
 
+footer header {
+  max-width: 95%;
+}
+
 .projects {
   display: grid;
   grid-template-columns: 1fr;
