@@ -87,6 +87,10 @@ h3 {
   font-style: normal;
 }
 
+.grey {
+  color: #42526e;
+}
+
 .about-me * {
   margin: 1px;
 }
@@ -296,12 +300,12 @@ h3 {
 
 .input {
   font-family: 'Inter', sans-serif;
-  margin: 10px 1px;
+  margin: 12px 1px;
   width: 100%;
   padding: 15px 16px;
   border-radius: 4px;
   font-size: 1.5rem;
-  border-color: grey;
+  border: 1px solid #d0d9d4;
   border-style: solid;
 }
 
@@ -319,4 +323,5 @@ textarea.input {
   border-radius: 4px;
   width: 36%;
   height: 4px;
+  margin-top: 120px;
 }

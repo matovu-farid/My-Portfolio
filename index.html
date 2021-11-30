@@ -426,9 +426,9 @@
             </h2>
         </header>
         <form action="https://formspree.io/f/mayvwppv" method="post" class="input-container">
-            <input type="text" name="full-name" placeholder="Full name" class="input">
-            <input type="email" name="_replyto" placeholder="Email address" class="input">
-            <textarea name="message" class="input">Enter text here</textarea>
+            <input type="text" name="full-name" placeholder="Full name" class="input" maxlength="30"  required>
+            <input type="email" name="_replyto" placeholder="Email address" class="input" required>
+            <textarea name="message" class="input" placeholder="Enter text here" maxlength="500" required></textarea>
             <button class="button bg-green white card">Get in touch</button>
         </form>
         <section class="links">
@@ -463,9 +463,10 @@
                 </li>
             </ul>
         </section>
-        <p class="center medium-text">matovu90@gmail.com</p>
-        <hr class="black-line">
+        <p class="center medium-text grey">matovu90@gmail.com</p>
+        
     </footer>
+    <hr class="black-line">
 
 </body>
 
