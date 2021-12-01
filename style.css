@@ -382,7 +382,12 @@ textarea.input {
 
   .about-me-container {
     padding: 3%;
-    grid-template-columns: repeat(3, 369px);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .work {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 32px;
   }
 
   .footer-content {
@@ -462,10 +467,5 @@ textarea.input {
 
   .projects .hr {
     display: none;
-  }
-
-  .work {
-    grid-template-columns: repeat(3, 369px);
-    grid-row-gap: 32px;
   }
 }
