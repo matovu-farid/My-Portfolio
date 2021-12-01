@@ -357,7 +357,7 @@ textarea.input {
   display: none;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 993px) {
   footer {
     margin: 150px 1px;
     background: url('./assets/backgrounds/contact-form-3-desktop.png') no-repeat right 65%, url('./assets/backgrounds/contact-form-1-desktop.png') no-repeat left 80%, url('./assets/backgrounds/contact-form-2-desktop.png') no-repeat 30% 80%;
@@ -380,12 +380,9 @@ textarea.input {
     width: 100%;
   }
 
-  .work {
-    padding: 3%;
-  }
-
   .about-me-container {
     padding: 3%;
+    grid-template-columns: repeat(3, 369px);
   }
 
   .footer-content {
@@ -418,7 +415,7 @@ textarea.input {
   }
 
   .bordered-card {
-    margin: 1px;
+    margin: 1px 12px 1px;
   }
 
   .background {
@@ -465,5 +462,10 @@ textarea.input {
 
   .projects .hr {
     display: none;
+  }
+
+  .work {
+    grid-template-columns: repeat(3, 369px);
+    grid-row-gap: 32px;
   }
 }
