@@ -11,14 +11,15 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 68px;
+  display: flex;
+  flex-direction: column;
   align-content: center;
-  align-items: center;
 }
 
 footer {
@@ -81,6 +82,10 @@ img {
   margin: 0.000000001px;
 }
 
+.projects .centered-column h2 {
+  width: 40%;
+}
+
 h3 {
   font-size: 2.4rem;
   padding: 1.6rem;
@@ -111,9 +116,9 @@ h3 {
 }
 
 .work {
-  margin: 0.0000000000001px;
+  margin: 68px 0.0000000000001px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 12px 6px;
   justify-content: center;
 }
@@ -126,7 +131,8 @@ h3 {
 .about-me-container {
   margin: 0.0000000000001px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 352px;
   grid-gap: 12px 6px;
   justify-content: center;
 }
@@ -134,7 +140,7 @@ h3 {
 .hr {
   width: 48px;
   height: 4px;
-  margin: 24px 1px 68px;
+  margin: 24px 1px 1px;
 }
 
 .bg {
@@ -220,6 +226,11 @@ h3 {
   width: 80px;
   height: 80px;
   align-self: center;
+  margin-top: 60px;
+}
+
+.tag-container:last-child {
+  margin-bottom: 60px;
 }
 
 .centered-column {
@@ -349,7 +360,7 @@ textarea.input {
 @media (min-width: 800px) {
   footer {
     margin: 150px 1px;
-    background: url('./assets/backgrounds/contact-form-3-desktop.png') no-repeat right 75%, url('./assets/backgrounds/contact-form-1-desktop.png') no-repeat left 80%, url('./assets/backgrounds/contact-form-2-desktop.png') no-repeat 30% 80%;
+    background: url('./assets/backgrounds/contact-form-3-desktop.png') no-repeat right 65%, url('./assets/backgrounds/contact-form-1-desktop.png') no-repeat left 80%, url('./assets/backgrounds/contact-form-2-desktop.png') no-repeat 30% 80%;
     background-size: 13%;
     padding: 1px 1px 60px  1px;
   }
@@ -369,17 +380,27 @@ textarea.input {
     width: 100%;
   }
 
+  .work {
+    padding: 3%;
+  }
+
+  .about-me-container {
+    padding: 3%;
+  }
+
   .footer-content {
+    padding: 3%;
     flex-direction: row;
   }
 
   .footer-content > h2 {
-    flex: 1.2;
+    flex: 1;
     margin: 1px 24px 1px 1px;
+    text-align: start;
   }
 
   .footer-content > form {
-    flex: 2;
+    flex: 1;
   }
 
   .footer-content > form > button {
@@ -403,6 +424,7 @@ textarea.input {
   .background {
     background: url('./assets/backgrounds/hero_desktop.png');
     background-size: 100%;
+    padding: 1px;
   }
 
   .bg {
@@ -414,6 +436,7 @@ textarea.input {
 
   .desktop-nav {
     display: block;
+    margin: 1px 1px 15%;
   }
 
   .desktop-nav ul {
@@ -430,5 +453,17 @@ textarea.input {
   p {
     padding: 1px;
     margin: 1px;
+  }
+
+  .hero .links {
+    flex: 0;
+  }
+
+  .hero .links > ul {
+    margin: 5% 1px 13%;
+  }
+
+  .projects .hr {
+    display: none;
   }
 }
