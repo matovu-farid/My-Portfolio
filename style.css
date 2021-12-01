@@ -11,14 +11,15 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 68px;
+  display: flex;
+  flex-direction: column;
   align-content: center;
-  align-items: center;
 }
 
 footer {
@@ -27,6 +28,12 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 5px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -38,7 +45,7 @@ h2 {
   font-weight: 700;
 }
 
-footer h2 {
+.footer-content h2 {
   max-width: 95%;
   text-align: center;
 }
@@ -75,6 +82,10 @@ img {
   margin: 0.000000001px;
 }
 
+.projects .centered-column h2 {
+  width: 70%;
+}
+
 h3 {
   font-size: 2.4rem;
   padding: 1.6rem;
@@ -105,32 +116,36 @@ h3 {
 }
 
 .work {
-  margin: 0.0000000000001px;
+  margin: 68px 0.0000000000001px;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 12px 6px;
   justify-content: center;
 }
 
 .about-me {
-  margin: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me-container {
+  margin: 0.0000000000001px;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 352px;
+  grid-gap: 12px 6px;
   justify-content: center;
 }
 
 .hr {
   width: 48px;
   height: 4px;
-  margin: 24px 1px 68px;
+  margin: 24px 1px 1px;
 }
 
 .bg {
-  background: url('../assets/backgrounds/about-me-bottom.png') left bottom no-repeat, url("../assets/backgrounds/about-me-top.png") right top no-repeat;
-  background-size: 50px;
+  background: url('./assets/backgrounds/about-me-bottom.png') left bottom no-repeat, url("../assets/backgrounds/about-me-top.png") right top no-repeat;
+  background-size: 13%;
   background-repeat: no-repeat;
   padding: 50px 1px 1px 1px;
 }
@@ -211,6 +226,11 @@ h3 {
   width: 80px;
   height: 80px;
   align-self: center;
+  margin-top: 60px;
+}
+
+.tag-container:last-child {
+  margin-bottom: 60px;
 }
 
 .centered-column {
@@ -281,11 +301,12 @@ h3 {
 .links ul {
   width: 65%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .links li {
   list-style-type: none;
+  margin: 10px;
 }
 
 .links a {
@@ -307,7 +328,8 @@ h3 {
   font-family: 'Inter', sans-serif;
   margin: 12px 1px;
   width: 100%;
-  padding: 15px 16px;
+  padding: 15px 0.000001px;
+  text-indent: 16px;
   border-radius: 4px;
   font-size: 1.5rem;
   border: 1px solid #d0d9d4;
@@ -329,4 +351,121 @@ textarea.input {
   width: 36%;
   height: 4px;
   margin-top: 120px;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 993px) {
+  footer {
+    margin: 150px 1px;
+    background: url('./assets/backgrounds/contact-form-3-desktop.png') no-repeat right 65%, url('./assets/backgrounds/contact-form-1-desktop.png') no-repeat left 80%, url('./assets/backgrounds/contact-form-2-desktop.png') no-repeat 30% 80%;
+    background-size: 13%;
+    padding: 1px 1px 60px  1px;
+  }
+
+  .black-line {
+    display: none;
+    margin-top: 1px;
+  }
+
+  footer > p.center {
+    display: none;
+  }
+
+  footer .links {
+    border-top: #dfe1e6 1px solid;
+    margin-top: 225px;
+    width: 100%;
+  }
+
+  .about-me-container {
+    padding: 3%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .work {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 32px;
+  }
+
+  .footer-content {
+    padding: 3%;
+    flex-direction: row;
+  }
+
+  .footer-content > h2 {
+    flex: 1;
+    margin: 1px 24px 1px 1px;
+    text-align: start;
+  }
+
+  .footer-content > form {
+    flex: 1;
+  }
+
+  .footer-content > form > button {
+    align-self: flex-start;
+    margin: 0.00000000001px;
+  }
+
+  .medium-text {
+    max-width: 65%;
+    text-align: center;
+  }
+
+  .tool-bar {
+    display: none;
+  }
+
+  .bordered-card {
+    margin: 1px 12px 1px;
+  }
+
+  .background {
+    background: url('./assets/backgrounds/hero_desktop.png');
+    background-size: 100%;
+    padding: 1px;
+  }
+
+  .bg {
+    background: url('./assets/backgrounds/about-me-2-desktop.png') left bottom no-repeat, url("./assets/backgrounds/about-me-1-desktop.png") right top no-repeat;
+    background-size: 13%;
+    background-repeat: no-repeat;
+    padding: 50px 1px 1px 1px;
+  }
+
+  .desktop-nav {
+    display: block;
+    margin: 1px 1px 15%;
+  }
+
+  .desktop-nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .desktop-nav li {
+    padding: 10px;
+  }
+
+  .hero h2,
+  h1,
+  p {
+    padding: 1px;
+    margin: 1px;
+  }
+
+  .hero .links {
+    flex: 0;
+  }
+
+  .hero .links > ul {
+    margin: 5% 1px 13%;
+  }
+
+  .projects .hr {
+    display: none;
+  }
 }
