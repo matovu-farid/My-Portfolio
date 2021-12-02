@@ -58,6 +58,11 @@ h2 {
 
 button {
   border-style: none;
+  transition: all 0.5s linear;
+}
+
+button:hover {
+  transform: scale(1.15);
 }
 
 ul {
