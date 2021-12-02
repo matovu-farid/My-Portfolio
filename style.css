@@ -473,4 +473,20 @@ textarea.input {
   .projects .hr {
     display: none;
   }
+
+  .stretched-column {
+    transition: all 1s;
+  }
+
+  .stretched-column:hover {
+    transform: translateY(-12px);
+  }
+
+  .scale-transition {
+    transition: all 1s;
+  }
+
+  .scale-transition:hover {
+    transform: translateY(-12px) scale(1.12);
+  }
 }
