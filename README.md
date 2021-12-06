@@ -18,6 +18,10 @@ This project is my portfolio.
 To get the content of this project locally you need to run this command in your terminal:
 - git clone your https://github.com/matovu-farid/My-Portfolio.git
 - cd project My-Portfolio
+
+### Deployment
+This project is deployed on a github page on the link below:
+- https://matovu-farid.github.io/My-Portfolio
 ## Authors
 
 👤 **Matovu Fariid Nkoba**
