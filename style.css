@@ -58,6 +58,11 @@ h2 {
 
 button {
   border-style: none;
+  transition: all 0.5s linear;
+}
+
+button:hover {
+  transform: scale(1.15);
 }
 
 ul {
@@ -429,6 +434,20 @@ textarea.input {
     padding: 1px;
   }
 
+  .hero header {
+    animation: 10s infinite alternate scale ease-in-out;
+  }
+
+  @keyframes scale {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.11);
+    }
+  }
+
   .bg {
     background: url('./assets/backgrounds/about-me-2-desktop.png') left bottom no-repeat, url("./assets/backgrounds/about-me-1-desktop.png") right top no-repeat;
     background-size: 13%;
@@ -448,6 +467,11 @@ textarea.input {
 
   .desktop-nav li {
     padding: 10px;
+    transition: all 1s;
+  }
+
+  .desktop-nav li:hover {
+    transform: scale(1.4);
   }
 
   .hero h2,
@@ -465,7 +489,52 @@ textarea.input {
     margin: 5% 1px 13%;
   }
 
+  .hero .links li {
+    transition: all 0.25s;
+  }
+
+  .hero p {
+    animation: 4s 1 appear forwards;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: scale(0.5) rotate(-5deg);
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2) rotate(-2.5deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  .hero .links li:hover {
+    transform: scale(1.2);
+  }
+
   .projects .hr {
     display: none;
+  }
+
+  .stretched-column {
+    transition: all 1s;
+  }
+
+  .stretched-column:hover {
+    transform: translateY(-12px);
+  }
+
+  .scale-transition {
+    transition: all 1s;
+  }
+
+  .scale-transition:hover {
+    transform: translateY(-12px) scale(1.12);
   }
 }
