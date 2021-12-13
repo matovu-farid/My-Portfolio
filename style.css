@@ -369,6 +369,27 @@ textarea.input {
   height: 100vh;
   background-color: white;
   width: 100%;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.mobile-menu > * {
+  margin: 0 2.4rem;
+}
+
+.mobile-menu ul {
+  font-size: 3.2rem;
+}
+
+.mobile-menu li {
+  margin: 0 0 4rem;
+}
+
+.close {
+  align-self: flex-end;
+  color: #93a69d;
+  margin: 6.2rem 3.8rem 3.2rem;
 }
 
 @media (min-width: 993px) {
@@ -446,8 +467,6 @@ textarea.input {
   .hero header {
     animation: 10s infinite alternate scale ease-in-out;
   }
-
-
 
   @keyframes scale {
     from {
