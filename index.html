@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bac16a29bd.js" crossorigin="anonymous"></script>
 
 
     <title>My Portfolio</title>
@@ -25,12 +26,19 @@
 </head>
 
 <body>
+        <section class="mobile-menu">
+        <i class="close fa fa-times" aria-hidden="true"></i>
+        <ul class="mobile-menu-items">
+            <li>Portfolio</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </section>
     <section class="hero">
-
         <header class="tool-bar">
             <p class="medium dark-blue">Welcome</p>
             <nav>
-                <i class="fa fa-2x fa-bars" aria-hidden="true"></i>
+                <i class="hamburger-menu fa fa-2x fa-bars" aria-hidden="true"></i>
             </nav>
         </header>
         <section class="background">
@@ -496,6 +504,7 @@
 
     </footer>
     <hr class="black-line">
+    <script src="./mobileMenu.js"></script>
 </body>
 
 </html>

@@ -362,6 +362,15 @@ textarea.input {
   display: none;
 }
 
+.mobile-menu {
+  display: none;
+  z-index: 999;
+  position: absolute;
+  height: 100vh;
+  background-color: white;
+  width: 100%;
+}
+
 @media (min-width: 993px) {
   footer {
     margin: 150px 1px;
@@ -437,6 +446,8 @@ textarea.input {
   .hero header {
     animation: 10s infinite alternate scale ease-in-out;
   }
+
+
 
   @keyframes scale {
     from {
