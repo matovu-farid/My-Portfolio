@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
 }
 
 main {
@@ -361,6 +362,38 @@ textarea.input {
 
 .desktop-nav {
   display: none;
+}
+
+.mobile-menu {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+  width: 100%;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.mobile-menu > * {
+  padding: 0 2.4rem;
+}
+
+.mobile-menu ul {
+  font-size: 3.2rem;
+}
+
+.mobile-menu li {
+  margin: 0 0 4rem;
+}
+
+.close {
+  align-self: flex-end;
+  color: #93a69d;
+  margin: 6.2rem 3.8rem 3.2rem;
 }
 
 @media (min-width: 993px) {

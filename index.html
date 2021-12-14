@@ -25,23 +25,33 @@
 </head>
 
 <body>
+        <section class="mobile-menu ">
+            <a href="#" class="close">
+                <i class=" fa fa-times" aria-hidden="true"></i>
+            </a>
+        
+        <ul class="mobile-menu-items">
+            <li><a href="#projects">Portfolio</a> </li>
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </section>
     <section class="hero">
-
         <header class="tool-bar">
             <p class="medium dark-blue">Welcome</p>
             <nav>
-                <i class="fa fa-2x fa-bars" aria-hidden="true"></i>
+                <i class="hamburger-menu fa fa-2x fa-bars" aria-hidden="true"></i>
             </nav>
         </header>
         <section class="background">
             <nav class="desktop-nav">
                 <ul class="blue">
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#projects">Portfolio</a></li>
 
-                    <li><a href="#">About</a></li>
+                    <li><a href="#about-me">About</a></li>
 
 
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <section class="centered-column">
@@ -97,7 +107,7 @@
     </section>
 
     <main>
-        <section class="projects">
+        <section class="projects" id="projects">
             <header class="centered-column">
                 <h2 class="dark-blue">
                     My Recent Works
@@ -324,7 +334,7 @@
 
             </section>
         </section>
-        <section class="about-me">
+        <section class="about-me" id="about-me">
             <section class="centered-column bg">
 
                 <header>
@@ -445,7 +455,7 @@
     </main>
     <footer>
 
-        <section class="footer-content">
+        <section class="footer-content" id="contact">
 
 
             <h2 class="dark-blue heading">
@@ -499,6 +509,7 @@
 
     </footer>
     <hr class="black-line">
+    <script src="./mobileMenu.js"></script>
 </body>
 
 </html>
