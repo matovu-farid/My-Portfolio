@@ -24,7 +24,7 @@ This project is deployed on a github page on the link below:
 - https://matovu-farid.github.io/My-Portfolio
 ## Authors
 
-👤 **Matovu Fariid Nkoba**
+👤 **Matovu Farid Nkoba**
 
 - GitHub: [@matovu-farid](https://github.com/matovu-farid)
 - Twitter: [@matovu100](https://twitter.com/matovu100)

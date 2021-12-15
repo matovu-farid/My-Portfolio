@@ -47,6 +47,10 @@ h2 {
   font-weight: 700;
 }
 
+.details h2 {
+  margin: 1rem 0 0 0;
+}
+
 .footer-content h2 {
   max-width: 95%;
   text-align: center;
@@ -98,6 +102,28 @@ h3 {
   padding: 1.6rem;
   font-weight: 600;
   font-style: normal;
+}
+
+.icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.github .icon {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.no-display {
+  display: none;
 }
 
 .medium {
@@ -206,7 +232,7 @@ h3 {
 }
 
 .tag-container * {
-  margin: 0.0000001px;
+  margin: 0;
   justify-content: space-evenly;
 }
 
@@ -364,6 +390,11 @@ textarea.input {
   display: none;
 }
 
+.close {
+  color: #93a69d;
+  margin: 6.2rem 3.8rem 3.2rem;
+}
+
 .mobile-menu {
   display: none;
   z-index: 999;
@@ -378,6 +409,58 @@ textarea.input {
   font-weight: 600;
 }
 
+.details {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  flex-direction: column;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.details > .dark-blue {
+  font-size: 3.2rem;
+}
+
+.details .medium-text {
+  font-size: 1.6rem;
+}
+
+.details > .card {
+  background-color: white;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.details .featuredImage {
+  border-radius: 0.8rem;
+}
+
+.details .close {
+  font-size: 1.6rem;
+  position: absolute;
+  margin-top: 3rem;
+  right: 3rem;
+  color: white;
+}
+
+.button-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-list .button {
+  margin: 24px 0;
+  min-width: 148px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .mobile-menu > * {
   padding: 0 2.4rem;
 }
@@ -390,10 +473,14 @@ textarea.input {
   margin: 0 0 4rem;
 }
 
-.close {
-  align-self: flex-end;
-  color: #93a69d;
-  margin: 6.2rem 3.8rem 3.2rem;
+.blur {
+  background-color: rgba(17, 17, 17, 0.35);
+  backdrop-filter: blur(5px);
+}
+
+.card-content {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 993px) {
@@ -570,5 +657,82 @@ textarea.input {
 
   .scale-transition:hover {
     transform: translateY(-12px) scale(1.12);
+  }
+
+  .details {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+
+  .details > .card {
+    background-color: white;
+    width: 70%;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details .fa-times {
+    color: #67798e;
+  }
+
+  .details .medium-text {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .card-content > .dark-blue {
+    width: 60%;
+  }
+
+  .button-list {
+    width: 40%;
+    order: 1;
+    justify-content: flex-end;
+  }
+
+  .button-list .button {
+    margin: 0 0 0 1rem;
+    display: flex;
+    min-width: 115px;
+    justify-content: space-evenly;
+  }
+
+  .button-list .icon {
+    margin-left: 5px;
+  }
+
+  .details .card-content {
+    justify-content: space-between;
+  }
+
+  .details .card-content p {
+    order: 2;
+  }
+
+  .details .close {
+    position: static;
+    background-color: #ebecf0;
+    padding: 1.4rem;
+    border-radius: 0.8rem;
+    align-self: flex-end;
+    margin: 0;
+  }
+
+  .details .tag-container {
+    order: 2;
+  }
+
+  .featuredImage {
+    margin-top: 1.4rem;
   }
 }
