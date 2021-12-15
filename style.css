@@ -100,6 +100,28 @@ h3 {
   font-style: normal;
 }
 
+.icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.github .icon {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.no-display {
+  display: none;
+}
+
 .medium {
   font-size: 2rem;
 }
@@ -364,6 +386,12 @@ textarea.input {
   display: none;
 }
 
+.close {
+  align-self: flex-end;
+  color: #93a69d;
+  margin: 6.2rem 3.8rem 3.2rem;
+}
+
 .mobile-menu {
   display: none;
   z-index: 999;
@@ -378,6 +406,49 @@ textarea.input {
   font-weight: 600;
 }
 
+.details {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  flex-direction: column;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.details > .card {
+  background-color: white;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.details .featuredImage {
+  border-radius: 0.8rem;
+}
+
+.details .close {
+  font-size: 1.6rem;
+  position: absolute;
+  margin-top: 3rem;
+  right: 3rem;
+  color: white;
+}
+
+.button-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-list .button {
+  margin: 24px 0;
+  min-width: 148px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .mobile-menu > * {
   padding: 0 2.4rem;
 }
@@ -390,10 +461,9 @@ textarea.input {
   margin: 0 0 4rem;
 }
 
-.close {
-  align-self: flex-end;
-  color: #93a69d;
-  margin: 6.2rem 3.8rem 3.2rem;
+.blur {
+  background-color: rgba(17, 17, 17, 0.35);
+  backdrop-filter: blur(5px);
 }
 
 @media (min-width: 993px) {
