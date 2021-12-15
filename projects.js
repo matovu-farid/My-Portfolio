@@ -1,4 +1,12 @@
 
+const isDesktop =()=>{
+  return window.matchMedia("(min-width: 993px)").matches;
+}
+
+const featuredImage = ()=>{
+  return isDesktop()? './assets/backgrounds/desktop_freatured.png':'./assets/backgrounds/details.jpeg';
+}
+
 const objects = [
   {
       name: 'Multi-Post Stories Gain+Glory',
@@ -6,11 +14,77 @@ const objects = [
   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea`,
       image: './assets/place_holders/plaholder.png',
       featuredImage: './assets/backgrounds/details.jpeg',
+      desktopFeatured: './assets/backgrounds/desktop_freatured.png',
       technologies: ['css','html','bootstrap','ruby'],
+      desktopTechnologies : ['CodeKit','Github','Javascript','Terminal','CodePen'],
       linkToLiveVersion : 'https://matovu-farid.github.io/My-Portfolio',
       linkToSource: 'https://github.com/matovu-farid/My-Portfolio'
   },
+  {
+    name: 'Multi-Post Stories Gain+Glory',
+    description : `
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea`,
+    image: './assets/place_holders/plaholder.png',
+    featuredImage: './assets/backgrounds/details.jpeg',
+    desktopFeatured: './assets/backgrounds/desktop_freatured.png',
+    technologies: ['css','html','bootstrap','ruby'],
+    desktopTechnologies : ['CodeKit','Github','Javascript','Terminal','CodePen'],
+    linkToLiveVersion : 'https://matovu-farid.github.io/My-Portfolio',
+    linkToSource: 'https://github.com/matovu-farid/My-Portfolio'
+},
+{
+  name: 'Multi-Post Stories Gain+Glory',
+  description : `
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea`,
+  image: './assets/place_holders/plaholder.png',
+  featuredImage: './assets/backgrounds/details.jpeg',
+  desktopFeatured: './assets/backgrounds/desktop_freatured.png',
+  technologies: ['css','html','bootstrap','ruby'],
+  desktopTechnologies : ['CodeKit','Github','Javascript','Terminal','CodePen'],
+  linkToLiveVersion : 'https://matovu-farid.github.io/My-Portfolio',
+  linkToSource: 'https://github.com/matovu-farid/My-Portfolio'
+},
+{
+  name: 'Multi-Post Stories Gain+Glory',
+  description : `
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea`,
+  image: './assets/place_holders/plaholder.png',
+  featuredImage: './assets/backgrounds/details.jpeg',
+  desktopFeatured: './assets/backgrounds/desktop_freatured.png',
+  technologies: ['css','html','bootstrap','ruby'],
+  desktopTechnologies : ['CodeKit','Github','Javascript','Terminal','CodePen'],
+  linkToLiveVersion : 'https://matovu-farid.github.io/My-Portfolio',
+  linkToSource: 'https://github.com/matovu-farid/My-Portfolio'
+},
+{
+  name: 'Multi-Post Stories Gain+Glory',
+  description : `
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea`,
+  image: './assets/place_holders/plaholder.png',
+  featuredImage: './assets/backgrounds/details.jpeg',
+  desktopFeatured: './assets/backgrounds/desktop_freatured.png',
+  technologies: ['css','html','bootstrap','ruby'],
+  desktopTechnologies : ['CodeKit','Github','Javascript','Terminal','CodePen'],
+  linkToLiveVersion : 'https://matovu-farid.github.io/My-Portfolio',
+  linkToSource: 'https://github.com/matovu-farid/My-Portfolio'
+},
+{
+  name: 'Multi-Post Stories Gain+Glory',
+  description : `
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea`,
+  image: './assets/place_holders/plaholder.png',
+  featuredImage: './assets/backgrounds/details.jpeg',
+  desktopFeatured: './assets/backgrounds/desktop_freatured.png',
+  technologies: ['css','html','bootstrap','ruby'],
+  desktopTechnologies : ['CodeKit','Github','Javascript','Terminal','CodePen'],
+  linkToLiveVersion : 'https://matovu-farid.github.io/My-Portfolio',
+  linkToSource: 'https://github.com/matovu-farid/My-Portfolio'
+},
+
+  
 ]
+
+
 
 const createListItem = (technology)=>{
   const listItem = document.createElement('li');
@@ -27,9 +101,10 @@ const addCloseFunction = (detailsHtml) =>{
   });
 }
 
-const addTechnologies = (detailsHtml, technologies)=> {
+const addTechnologies = (detailsHtml,{technologies, desktopTechnologies})=> {
   const tagContainer = detailsHtml.querySelector('.tag-container');
-  technologies.forEach(technology => {
+  const tags = isDesktop()?desktopTechnologies:technologies;
+  tags.forEach(technology => {
     const listItem = createListItem(technology);
     tagContainer.appendChild(listItem);
   });
@@ -63,10 +138,12 @@ const makeProjectTechnologies = (projectHtml, technologies)=> {
   });
 }
 
-const makeDetails = ({technologies = [],linkToLiveVersion,linkToSource,description,featuredImage})=>{
-  const detailsHtml = createDetails(featuredImage, description);
+const makeDetails = (object)=>{
+
+  const {linkToLiveVersion,linkToSource,description,featuredImage,desktopFeatured} = object
+  const detailsHtml = createDetailsHtml(featuredImage, description,desktopFeatured);
   addButtonFunctionality(detailsHtml, linkToLiveVersion, linkToSource);
-  addTechnologies(detailsHtml, technologies);
+  addTechnologies(detailsHtml,object);
   showPopup(detailsHtml);
 }
 
@@ -75,23 +152,22 @@ const addDetails= (projectHtml, object)=> {
   seeResume.addEventListener('click', () => makeDetails(object));
 }
 
-
-const makeProject = ({name,image,technologies,linkToLiveVersion,linkToSource,description,featuredImage})=>{
-  const projectHtml = createProject(image, name);      
+const makeProject = (object)=>{
+  const {name,image,technologies} = object
+  const projectHtml = createProjectHtml(image, name);      
        makeProjectTechnologies(projectHtml, technologies);
-       const object = {technologies: technologies,linkToLiveVersion: linkToLiveVersion,linkToSource: linkToSource,description: description,featuredImage:featuredImage}    
        addDetails(projectHtml, object);
        const myProjects = document.querySelector('.work')
     myProjects.appendChild(projectHtml)
 }
 
-const createAllProjects = (objects)=>{
-  objects.forEach((object,index)=>makeProject(object,index));
+const createAllProjects = (objects=[])=>{
+  objects.forEach(makeProject);
 }
 createAllProjects(objects);
 
 
-function createProject(image, name) {
+function createProjectHtml(image, name) {
   const projectHtml = document.createElement('div');
   projectHtml.innerHTML = `
   <section class="bordered-card">
@@ -122,18 +198,19 @@ function createProject(image, name) {
   return projectHtml;
 }
 
-function createDetails(featuredImage, description) {
+function createDetailsHtml(featuredImage, description,desktopFeatured) {
   const detailsHtml = document.createElement('section');
   detailsHtml.classList.add(...['details','blur'])
+  let imageSource = isDesktop()? desktopFeatured:featuredImage;
   detailsHtml.innerHTML = `
   <div class="card">
 <i class="fa fa-times close" aria-hidden="true"></i>
-<img class="featuredImage" src="${featuredImage}" alt="project-image">
-<h2 class="dark-blue">Keeping track of hundreds of
+<img class="featuredImage" src="${imageSource}" alt="project-image">
+
+  <div class="card-content">
+  <h2 class="dark-blue">Keeping track of hundreds of
   components</h2>
   <ul class="tag-container">
-    
-
   </ul>
   <p class="blue medium-text">
     ${description}
@@ -141,6 +218,7 @@ function createDetails(featuredImage, description) {
   <div class="button-list">
   <button class="button bg-green white card see-live">See Live <img class="icon" src="./assets/icons/seelive.svg" alt="see live"></button>
               <button class="button bg-green white card github">See Source <img class="icon" src="./assets/icons/github.png" alt="github"></button>
+  </div>
   </div>
   </div>
   `;

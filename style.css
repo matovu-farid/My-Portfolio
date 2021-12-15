@@ -47,6 +47,10 @@ h2 {
   font-weight: 700;
 }
 
+.details h2 {
+  margin: 1rem 0 0 0;
+}
+
 .footer-content h2 {
   max-width: 95%;
   text-align: center;
@@ -228,7 +232,7 @@ h3 {
 }
 
 .tag-container * {
-  margin: 0.0000001px;
+  margin: 0;
   justify-content: space-evenly;
 }
 
@@ -387,7 +391,6 @@ textarea.input {
 }
 
 .close {
-  align-self: flex-end;
   color: #93a69d;
   margin: 6.2rem 3.8rem 3.2rem;
 }
@@ -417,11 +420,19 @@ textarea.input {
   overflow-y: scroll;
 }
 
+.details > .dark-blue {
+  font-size: 3.2rem;
+}
+
+.details .medium-text {
+  font-size: 1.6rem;
+}
+
 .details > .card {
   background-color: white;
   margin: 16px;
   padding: 16px;
-  border-radius: 20px;
+  border-radius: 16px;
   text-align: left;
 }
 
@@ -440,6 +451,7 @@ textarea.input {
 .button-list {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .button-list .button {
@@ -464,6 +476,11 @@ textarea.input {
 .blur {
   background-color: rgba(17, 17, 17, 0.35);
   backdrop-filter: blur(5px);
+}
+
+.card-content {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 993px) {
@@ -640,5 +657,82 @@ textarea.input {
 
   .scale-transition:hover {
     transform: translateY(-12px) scale(1.12);
+  }
+
+  .details {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+
+  .details > .card {
+    background-color: white;
+    width: 70%;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details .fa-times {
+    color: #67798e;
+  }
+
+  .details .medium-text {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .card-content > .dark-blue {
+    width: 60%;
+  }
+
+  .button-list {
+    width: 40%;
+    order: 1;
+    justify-content: flex-end;
+  }
+
+  .button-list .button {
+    margin: 0 0 0 1rem;
+    display: flex;
+    min-width: 115px;
+    justify-content: space-evenly;
+  }
+
+  .button-list .icon {
+    margin-left: 5px;
+  }
+
+  .details .card-content {
+    justify-content: space-between;
+  }
+
+  .details .card-content p {
+    order: 2;
+  }
+
+  .details .close {
+    position: static;
+    background-color: #ebecf0;
+    padding: 1.4rem;
+    border-radius: 0.8rem;
+    align-self: flex-end;
+    margin: 0;
+  }
+
+  .details .tag-container {
+    order: 2;
+  }
+
+  .featuredImage {
+    margin-top: 1.4rem;
   }
 }
