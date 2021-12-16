@@ -13,7 +13,6 @@ const isEmailInvalid = () => {
   return email.validity.typeMismatch;
 };
 
-
 form.addEventListener('submit', (event) => {
   const isNameInValid = checkName();
   const isEmailInValid = isEmailInvalid();
