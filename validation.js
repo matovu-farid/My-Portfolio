@@ -11,7 +11,19 @@ const checkName = () => {
   return email.validity.patternMismatch;
 };
 
+function isEmailInvalid () {
+  if (email.validity.typeMismatch){
+    error.textContent = 'Please input a valid email.';
+    
+  } else {
+    error.textContent = '';
+  }
+  return email.validity.typeMismatch
+};
+
 form.addEventListener('submit', (event) => {
   const isNameInValid = checkName();
-  if (isNameInValid) event.preventDefault();
+  const isEmailInValid = isEmailInvalid();
+  if (isNameInValid && isEmailInValid) event.preventDefault();
 });
+
