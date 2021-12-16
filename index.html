@@ -121,183 +121,6 @@
           <hr class="bg-green card hr" />
         </header>
         <section class="work">
-          
-
-
-          <!-- 
-          <section class="bordered-card">
-            <section class="stretched-column card">
-              <figure>
-                <img
-                  src="./assets/place_holders/plaholder.png"
-                  class="bg-light-green place-holder"
-                  alt="placeholder"
-                />
-              </figure>
-
-              <section class="centered-column bg-white card">
-                <header>
-                  <h3 class="minor-heading">
-                    Multi-Post Stories <br />
-                    Gain+Glory
-                  </h3>
-                </header>
-                <ul class="tag-container">
-                  <li>
-                    <p class="tag bg-light-green">Ruby on rails</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">css</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">JavaScript</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">html</p>
-                  </li>
-                </ul>
-                <button class="button bg-green white card">See Project</button>
-              </section>
-            </section>
-          </section>
-          <section class="bordered-card">
-            <section class="stretched-column card">
-              <figure>
-                <img
-                  src="./assets/place_holders/plaholder.png"
-                  class="bg-light-green place-holder"
-                  alt="placeholder"
-                />
-              </figure>
-              <section class="centered-column bg-white card">
-                <header>
-                  <h3 class="minor-heading">
-                    Multi-Post Stories <br />
-                    Gain+Glory
-                  </h3>
-                </header>
-                <ul class="tag-container">
-                  <li>
-                    <p class="tag bg-light-green">Ruby on rails</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">css</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">JavaScript</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">html</p>
-                  </li>
-                </ul>
-                <button class="button bg-green white card">See Project</button>
-              </section>
-            </section>
-          </section>section class="bordered-card">
-            <section class="stretched-column card">
-              <figure>
-                <img
-                  src="./assets/place_holders/plaholder.png"
-                  class="bg-light-green place-holder"
-                  alt="placeholder"
-                />
-              </figure>
-
-              <section class="centered-column bg-white card">
-                <header>
-                  <h3 class="minor-heading">
-                    Multi-Post Stories <br />
-                    Gain+Glory
-                  </h3>
-                </header>
-                <ul class="tag-container">
-                  <li>
-                    <p class="tag bg-light-green">Ruby on rails</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">css</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">JavaScript</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">html</p>
-                  </li>
-                </ul>
-                <button class="button bg-green white card">See Project</button>
-              </section>
-            </section>
-          </section>
-          <section class="bordered-card">
-            <section class="stretched-column card">
-              <figure>
-                <img
-                  src="./assets/place_holders/plaholder.png"
-                  class="bg-light-green place-holder"
-                  alt="placeholder"
-                />
-              </figure>
-
-              <section class="centered-column bg-white card">
-                <header>
-                  <h3 class="minor-heading">
-                    Multi-Post Stories <br />
-                    Gain+Glory
-                  </h3>
-                </header>
-                <ul class="tag-container">
-                  <li>
-                    <p class="tag bg-light-green">Ruby on rails</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">css</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">JavaScript</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">html</p>
-                  </li>
-                </ul>
-                <button class="button bg-green white card">See Project</button>
-              </section>
-            </section>
-          </section>
-          <section class="bordered-card">
-            <section class="stretched-column card">
-              <figure>
-                <img
-                  src="./assets/place_holders/plaholder.png"
-                  class="bg-light-green place-holder"
-                  alt="placeholder"
-                />
-              </figure>
-
-              <section class="centered-column bg-white card">
-                <header>
-                  <h3 class="minor-heading">
-                    Multi-Post Stories <br />
-                    Gain+Glory
-                  </h3>
-                </header>
-                <ul class="tag-container">
-                  <li>
-                    <p class="tag bg-light-green">Ruby on rails</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">css</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">JavaScript</p>
-                  </li>
-                  <li>
-                    <p class="tag bg-light-green">html</p>
-                  </li>
-                </ul>
-                <button class="button bg-green white card">See Project</button>
-              </section>
-            </section>
-          </section> -->
         </section>
       </section>
       <section class="about-me" id="about-me">
@@ -423,9 +246,11 @@
         </h2>
 
         <form
+        id="contact-form"
           action="https://formspree.io/f/mayvwppv"
           method="post"
           class="input-container"
+          novalidate
         >
           <label for="name"></label>
           <input
@@ -441,6 +266,7 @@
           <input
             id="email"
             type="email"
+            pattern="[^A-Z]*"
             name="_replyto"
             placeholder="Email address"
             class="input"
@@ -455,7 +281,8 @@
             maxlength="500"
             required
           ></textarea>
-          <button class="button bg-green white card" type="submit">
+          <div id="error" aria-live="polite"></div>
+          <button id="submit" class="button bg-green white card" type="submit">
             Get in touch
           </button>
         </form>
@@ -494,5 +321,6 @@
     <hr class="black-line" />
     <script src="./mobileMenu.js"></script>
     <script src="./projects.js"></script>
+    <script src="./validation.js"></script>
   </body>
 </html>
