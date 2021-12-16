@@ -483,6 +483,12 @@ textarea.input {
   flex-wrap: wrap;
 }
 
+#error {
+  font-size: 1.5rem;
+  color: red;
+  font-weight: 400;
+}
+
 @media (min-width: 993px) {
   footer {
     margin: 150px 1px;
