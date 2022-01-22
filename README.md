@@ -1,9 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # My-Portfolio
-## Description
 This is My personal portfolio.
-It describes my work as software developer including projects and technologies used as well their as screenshots.
+
+## Description
+It describes my work as a software developer including projects and technologies used as well as screenshots. The website is responsive and looks great on different screen sizes. It is built with HTML and CSS
 
 ![screenshot](./assets/project_screenshot.png)
 
