@@ -1,9 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # My-Portfolio
-
+## Description
 This is My personal portfolio.
-It describes my work as software developer.
+It describes my work as software developer including projects and technologies used as well their as screenshots.
 
 ![screenshot](./assets/project_screenshot.png)
 
