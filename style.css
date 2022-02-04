@@ -72,8 +72,8 @@ button:hover {
 }
 
 ul {
-  margin: 1px;
-  padding: 0.000001px;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -90,7 +90,7 @@ img {
 }
 
 .projects * {
-  margin: 0.000000001px;
+  margin: 0;
 }
 
 .projects .centered-column h2 {
@@ -145,11 +145,11 @@ h3 {
 }
 
 .work * {
-  margin: 0.00000000000001px;
+  margin: 0;
 }
 
 .work {
-  margin: 68px 0.0000000000001px;
+  margin: 68px 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 12px 6px;
@@ -162,7 +162,7 @@ h3 {
 }
 
 .about-me-container {
-  margin: 0.0000000000001px;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: 352px;
@@ -226,7 +226,7 @@ h3 {
 
 .tag-container {
   display: flex;
-  margin: 0.00001px;
+  margin: 0;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -361,7 +361,7 @@ h3 {
   font-family: 'Inter', sans-serif;
   margin: 12px 1px;
   width: 100%;
-  padding: 15px 0.000001px;
+  padding: 15px 0;
   text-indent: 16px;
   border-radius: 4px;
   font-size: 1.5rem;
@@ -539,7 +539,7 @@ textarea.input {
 
   .footer-content > form > button {
     align-self: flex-start;
-    margin: 0.00000000001px;
+    margin: 0;
   }
 
   .medium-text {
@@ -654,7 +654,7 @@ textarea.input {
   }
 
   .stretched-column:hover {
-    transform: translateY(-12px);
+    transform: scale(1.11);
   }
 
   .scale-transition {
@@ -669,7 +669,6 @@ textarea.input {
     display: none;
     z-index: 999;
     position: fixed;
-    top: 0;
     height: 100%;
     flex-direction: column;
     align-items: center;
@@ -679,6 +678,8 @@ textarea.input {
 
   .details > .card {
     background-color: white;
+    position: relative;
+    top: 250px;
     width: 70%;
     padding: 16px;
     border-radius: 8px;
@@ -732,6 +733,7 @@ textarea.input {
     border-radius: 0.8rem;
     align-self: flex-end;
     margin: 0;
+    cursor: pointer;
   }
 
   .details .tag-container {

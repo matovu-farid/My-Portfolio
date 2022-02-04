@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "style": "npx stylelint \"**/*.{css,scss}\"",
+    "style": "npx stylelint \"**/*.{css,scss}\" --fix",
     "hint": "npx hint .",
     "lint": "npx eslint . --fix"
   },
